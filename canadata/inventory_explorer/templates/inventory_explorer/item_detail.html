@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<h1>{{ title }}</h1>
+<p>{{ title.description_en }}</p>
+<p><a href= "{{ title.portal_url_en }}" >Go to dataset portal.</a></p>
+
+<form action="submit" method="post">
+    {% csrf_token %}
+    <!-- <input type="text" name="info"><br> -->
+    <input type="submit" value="Get Data">
+</form>
