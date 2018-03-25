@@ -11,7 +11,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('sass', function () {
-    return sass('process/sass/style.scss', {
+    return sass('process/sass/inventory_explorer_style.scss', {
       sourcemap: true,
       style: 'expanded'
       // expanded, nested, compact, compressed

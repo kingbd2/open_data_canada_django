@@ -1,0 +1,17 @@
+{% extends "inventory_explorer/base.html" %}
+
+{% block body %}
+  {% if titles %}
+    <ul class="container-items">
+      {% for title in titles %}
+        <h3><a href={{ title.portal_url_en }}> {{ title.title_en }} </a></h3>
+        <div class="owner">{{ title.owner_org_title }}</div>
+        <div class="date">{{ title.date_published }}</div>
+
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No datasets are available.</p>
+    {% endif %}
+{% endblock %}
+<!-- <a href="{% url 'inventory_explorer:item_detail' title.id %}" > </a> -->

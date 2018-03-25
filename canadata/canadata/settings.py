@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'polls',
     'visualizer',
     'inventory_explorer',
+    'blog',
 ]
 
 MIDDLEWARE = [

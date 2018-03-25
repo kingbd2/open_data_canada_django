@@ -7,7 +7,7 @@ from profile_data_script import profile
 def inventory_explorer(request):
     titles = Inventory.objects.exclude(date_published__isnull=True).order_by('-date_published')[:1000]
     context = {'titles': titles}
-    return render(request, 'inventory_explorer/index.html', context)
+    return render(request, 'inventory_explorer/inventory.html', context)
 
 def item_detail(request, inventory_id):
     title = get_object_or_404(Inventory, pk=inventory_id)

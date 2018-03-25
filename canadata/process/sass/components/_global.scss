@@ -1,0 +1,193 @@
+//
+// Global element rules
+//
+// Elements, that needs to be styled globally, should be styled here.
+// Only native html elements/selectors should be here, if you have class styled in this file - consider separating it to another file.
+
+html,
+body {
+    height: 100%;
+    margin: 10;
+    padding: 10;
+    width: 100%;
+}
+
+body {
+  margin: 5%;
+  padding: 0;
+  font-size: 1.8rem;
+  font-family: 'Helvetica', sans-serif;
+  color: $red;
+  background-color: $main-color;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  // margin: 10px;
+  height: 15%;
+  width: 100%;
+}
+
+h1 {
+  color: $red;
+  font-family: $font-clearstrong;
+  margin-left: 48px;
+}
+
+h2 {
+  color: $dark;
+  font-size: 1.8rem;
+  font-family: $font-main;
+  margin-bottom: 48px;
+  border-bottom: 2px solid #DEE2E5;
+}
+
+h3 {
+  color: $red;
+  font-size: 1.6rem;
+  font-family: $font-peace;
+  box-shadow: 0 0 12px hsla(0,0%,0,0.2);
+  padding: 12px 10px;
+  background-color: $white;
+  margin-bottom: 6px;
+  margin-top: 48px;
+  border-top: 1px solid $red;
+}
+
+h3:hover {
+  background-color: $darken;
+}
+
+.container-items {
+     @include display-grid;
+     grid-template-columns: repeat(3, 1fr);
+
+}
+
+.solidblockmenu{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 10px;
+    float: left;
+    font-family: $font-peace;
+    width: 100%;
+    // overflow: hidden;
+    top: 0;
+    position: sticky;
+    margin-bottom: 2em;
+    // border: 1px solid $blue;
+    background: $white;
+    // border-width: 1px 0;
+
+}
+
+.solidblockmenu li{
+    display: inline;
+}
+
+.solidblockmenu li a{
+    float: left;
+    color: $red;
+    padding: 12px 11px;
+    text-decoration: none;
+    border-right: 1px solid white;
+}
+
+.solidblockmenu li a:visited{
+    color: $red;
+}
+
+.solidblockmenu li a:hover, .solidblockmenu li
+
+// [disabled] {
+//     cursor: not-allowed;
+// }
+
+ul {
+  align-self: center;
+  justify-self: stretch;
+}
+
+ol {
+
+}
+
+figure {
+
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+p {
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  color: $blue;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
+
+.owner {
+  font-size: 1.2rem;
+  font-family: $font-peace;
+  color: $blue;
+  font-weight: bold;
+  align-self: center;
+  justify-self: left;
+}
+
+.date {
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  color: $black;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
+
+hr {
+
+}
+
+img {
+    max-width: 15%;
+}
+
+a {
+  color: $black;
+}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  }
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  }
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+  background-color: $darken;
+  }
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  underline;
+  font-weight:      bold;
+  }
+
+table {
+    //border-collapse: collapse;
+    //table-layout: fixed;
+    width: 100%;
+}
