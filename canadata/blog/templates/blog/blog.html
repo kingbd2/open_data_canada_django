@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block body %}
+  {% if posts %}
+    <ul class="container-items">
+      {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <div class="owner">{{ post.text }}</div>
+        <div class="date">{{ post.published_date }}</div>
+
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts are available.</p>
+    {% endif %}
+{% endblock %}
+<!-- <a href="{% url 'inventory_explorer:item_detail' title.id %}" > </a> -->

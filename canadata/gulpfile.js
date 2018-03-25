@@ -11,7 +11,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('sass', function () {
-    return sass('process/sass/inventory_explorer_style.scss', {
+    return sass('process/sass/blog_style.scss', {
       sourcemap: true,
       style: 'expanded'
       // expanded, nested, compact, compressed
@@ -20,7 +20,7 @@ gulp.task('sass', function () {
         console.error('Error!', err.message);
     })
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('inventory_explorer/static/'));
+    .pipe(gulp.dest('blog/static/'));
 });
 
 // 'builds/sassEssentials/css'

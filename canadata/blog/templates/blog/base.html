@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canadata Explorer</title>
+        <link rel="stylesheet" href="{% static 'blog_style.css' %}">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="/src/content/favicons/apple-touch-icon.png">
+        <!-- <link rel="icon" type="image/png" sizes="32x32" href="/src/content/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/src/content/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/src/content/favicons/manifest.json"> -->
+        <meta name="theme-color" content="#ffffff">
+    </head>
+      <ul id="stickymenu" class="solidblockmenu">
+        <li><a href="/polls">Canadata</a></li>
+        <li><a href="/inventory_explorer">Open Data Explorer</a></li>
+        <li><a href="/visualizer">Visualizer</a></li>
+        <li><a href="/blog">Canadata Blog</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    <header>
+      {% load static %}
+      <img src="{% static 'blog/images/Flag_of_Canada.svg' %}" alt="My image"/>
+      <h1>Open Canada Datasets</h1>
+    </header>
+    <body>
+      {% block body %} {% endblock %}
+    </body>
+    <footer>
+
+    </footer>
+</html>

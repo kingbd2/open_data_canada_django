@@ -26,5 +26,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('inventory_explorer/', include('inventory_explorer.urls')),
     path('visualizer/', include('visualizer.urls')),
+    path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
